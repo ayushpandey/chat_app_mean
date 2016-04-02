@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Chirp</title>
+    <script type="text/javascript" href="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script type="text/javascript" src="Javascripts/ChirpApp.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="Stylesheets/style.css">
+</head>
+<body ng-app="ChirpApp">
+<div id='main' class="container" ng-controller="authController">
+    <form class="form-auth" ng-submit="login()">
+        <h2>Log In</h2>
+        <p class="text-warning">
+            <span ng-bind="error_message"></span>
+        </p>
+        <input type="text" ng-model="user.username" placeholder="Username" class="form-control"><br>
+        <input type="password" ng-model="user.password" placeholder="Password" class="form-control"><br>
+        <input type="submit" value="Log in" class="btn btn-primary" />
+    </form>
+</div>
+</body>
+</html>
